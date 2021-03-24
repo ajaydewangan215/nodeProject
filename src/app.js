@@ -31,6 +31,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/about/*', (req, res) => {
+  res.render('about', {
+    error:"the page is not found"
+  });
+});
+
 app.get('/wheater', (req, res) => {
     res.send('Hello World!')
 });
